@@ -163,7 +163,6 @@ find the file --> kafka-single-node.yml file
 ## Creating new Topics
 
         ./kafka-topics.sh \
-            
             --create \
             --topic kafka.learning.tweets \
             --bootstrap-server localhost:9092 \
@@ -171,7 +170,6 @@ find the file --> kafka-single-node.yml file
             --replication-factor 1
 
         ./kafka-topics.sh \
-            
             --create \
             --bootstrap-server localhost:9092 \
             --topic kafka.learning.alerts \
@@ -200,7 +198,6 @@ find the file --> kafka-single-node.yml file
 ## Consuming Messages from Topics
 
         ./kafka-console-consumer.sh \
-            
             --topic kafka.learning.tweets \
             --bootstrap-server localhost:9092 \
             --from-beginning
@@ -208,7 +205,6 @@ find the file --> kafka-single-node.yml file
 ## Deleting Topics
 
         ./kafka-topics.sh \
-            
             --delete \
             --topic kafka.learning.alerts \
             --bootstrap-server localhost:9092
@@ -218,7 +214,6 @@ find the file --> kafka-single-node.yml file
 ## Create a Topic with multiple partitions
 
         ./kafka-topics.sh \
-           
             --create \
             --bootstrap-server localhost:9092 \
             --topic kafka.learning.orders \
@@ -229,7 +224,6 @@ find the file --> kafka-single-node.yml file
 ## Check topic partitioning
 
         ./kafka-topics.sh \
-            
             --topic kafka.learning.orders \
             --bootstrap-server localhost:9092 \
             --describe
