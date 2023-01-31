@@ -1,5 +1,7 @@
 # Kafka-training-repo
 
+Training Slide
+https://docs.google.com/presentation/d/1YemAxWr8McpUDnOPziWTKKU-a2yQX9WBJRN6Mh-7Klk/edit?usp=sharing
 
 1. Please make sure that Docker is already installed in the system,
 If not, install from https://www.docker.com/products/docker-desktop
@@ -23,10 +25,6 @@ find the file --> kafka-single-node.yml file
         docker-compose -f kafka-single-node.yml down
 
 
-
-#
-#
-#
 
 ## Logging into the Kafka Container
 
