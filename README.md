@@ -163,15 +163,17 @@ find the file --> kafka-single-node.yml file
 ## Creating new Topics
 
         ./kafka-topics.sh \
-            --zookeeper zookeeper:2181 \
+            
             --create \
             --topic kafka.learning.tweets \
+            --bootstrap-server localhost:9092 \
             --partitions 1 \
             --replication-factor 1
 
         ./kafka-topics.sh \
-            --zookeeper zookeeper:2181 \
+            
             --create \
+            --bootstrap-server localhost:9092 \
             --topic kafka.learning.alerts \
             --partitions 1 \
             --replication-factor 1
@@ -179,13 +181,13 @@ find the file --> kafka-single-node.yml file
 ## Listing Topics
 
         ./kafka-topics.sh \
-            --zookeeper zookeeper:2181 \
+            --bootstrap-server localhost:9092 \
             --list
 
 ## Getting details about a Topic
 
         ./kafka-topics.sh \
-            --zookeeper zookeeper:2181 \
+            --bootstrap-server localhost:9092 \
             --describe
 
 
@@ -198,24 +200,27 @@ find the file --> kafka-single-node.yml file
 ## Consuming Messages from Topics
 
         ./kafka-console-consumer.sh \
-            --bootstrap-server localhost:29092 \
+            
             --topic kafka.learning.tweets \
+            --bootstrap-server localhost:9092 \
             --from-beginning
 
 ## Deleting Topics
 
         ./kafka-topics.sh \
-            --zookeeper zookeeper:2181 \
+            
             --delete \
-            --topic kafka.learning.alerts
+            --topic kafka.learning.alerts \
+            --bootstrap-server localhost:9092
 
 
 
 ## Create a Topic with multiple partitions
 
         ./kafka-topics.sh \
-            --zookeeper zookeeper:2181 \
+           
             --create \
+            --bootstrap-server localhost:9092 \
             --topic kafka.learning.orders \
             --partitions 3 \
             --replication-factor 1
@@ -224,8 +229,9 @@ find the file --> kafka-single-node.yml file
 ## Check topic partitioning
 
         ./kafka-topics.sh \
-            --zookeeper zookeeper:2181 \
+            
             --topic kafka.learning.orders \
+            --bootstrap-server localhost:9092 \
             --describe
 
 ## Publishing Messages to Topics with keys
